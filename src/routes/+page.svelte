@@ -1,14 +1,12 @@
 <script lang="ts">
-    let min = $state(0)
     let max = $state(100)
     let current = $state(0)
 </script>
 
 <div class="input-progress">
-    <input type="number" bind:value={current}>
     <div class="input-container">
-        <input class="min-input" type="number" bind:value={min} >
-        <input type="range" min="{min}" max="{max}" bind:value={current}>
+        <input class="min-input" type="number" bind:value={current} >
+        <input type="range" min="0" max="{max}" bind:value={current}>
         <input class="max-input" type="number" bind:value={max}>
     </div>
 </div>
